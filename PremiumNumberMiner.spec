@@ -5,7 +5,7 @@ a = Analysis(
     ['premium_miner.py'],
     pathex=[],
     binaries=[],
-    datas=[('config.yaml', '.'), ('信息', '信息')],
+    datas=[('config.yaml', '.'), ('docs', 'docs')],
     hiddenimports=['yaml', 'web3', 'PyQt5'],
     hookspath=[],
     hooksconfig={},
