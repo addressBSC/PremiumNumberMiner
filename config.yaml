@@ -1,21 +1,22 @@
-# ============================================================
-# PremiumNumber (ADD) 矿机配置 v3.1
-# 合约: 0x1805eE5F34d7434FefCFf0CA2d2383E06823E6d8
-# 链: BSC Mainnet (Chain ID: 56)
-# ============================================================
+# PremiumNumber (ADD) Miner Configuration v3.1
+# Contract: 0x1805eE5F34d7434FefCFf0CA2d2383E06823E6d8
+# Network: BSC Mainnet (Chain ID: 56)
 
-# 钱包私钥 (64位, 0x 开头). 钱包里需要少量 BNB 付 gas.
+# Wallet Private Key (64 hex characters, starts with 0x)
 private_key: "YOUR_PRIVATE_KEY_HERE"
-# 多钱包轮换:
+
+# Multi-wallet rotation (optional):
 # private_keys: ["YOUR_KEY_1","YOUR_KEY_2"]
 
-# PremiumNumber 合约地址 (v3.1)
+# PremiumNumber Contract Address (v3.1)
 contract_address: "0x1805eE5F34d7434FefCFf0CA2d2383E06823E6d8"
-# AddressManager 合约地址 (v3.1)
+
+# AddressManager Contract Address (v3.1)
 address_manager: "0x78B11198268619728E4b53c642E8d68941004c11"
+
 chain_id: 56
 
-# --- RPC 节点 ---
+# RPC Nodes
 rpc_url: "https://bsc-dataseed.bnbchain.org"
 rpc_urls:
   - "https://bsc.rpc.blxrbdn.com"
@@ -24,7 +25,7 @@ rpc_urls:
   - "https://bsc-mainnet.public.blastapi.io"
   - "https://bsc-dataseed.bnbchain.org"
 
-# --- Gas 设置 ---
+# Gas Settings
 use_network_gas: true
 network_gas_multiplier: 1.0
 min_gas_price_gwei: 0.01
@@ -32,32 +33,25 @@ max_gas_price_gwei: 5
 gas_price_gwei: 0.05
 gas_limit: 2200000
 
-# --- 求解器 ---
-# cpu 或 gpu (GPU 强烈推荐, CPU 极慢)
+# Solver
+# Options: cpu or gpu (GPU strongly recommended)
 solver: gpu
-# GPU 设备名子串 (多GPU时选卡)
 gpu_device: ""
-# GPU 占用率 (%) 1-100
 gpu_target_util: 100
-# GPU 每批扫描 nonce 数
 gpu_batch_size: 16000000
 
-# --- 挖矿参数 ---
-# 最少尾部连续 8 的数量 (trailing-only 模式: >= 9, sandwich 模式: >= 5)
+# Mining Parameters
+# Minimum trailing '8's (trailing-only: >= 9, sandwich: >= 5)
 min_trailing_8s: 9
-# 提交前链上模拟验证
 simulate_before_submit: true
-# 自动重启
 auto_restart: true
-# 日志间隔 (秒)
 log_interval: 10
 
-# --- 多 Relay 广播 (可选) ---
+# Relay Broadcast (Optional)
 relay_urls:
   - "https://bsc.rpc.blxrbdn.com"
   - "https://rpc-bsc.48.club"
 
-# 试运行: 只算不提交不花 gas
+# Dry run (calculate without submitting)
 dry_run: false
-# 详细日志
 verbose_logs: false
